@@ -1,0 +1,55 @@
+@use 'variaveis';
+
+.shows {
+    padding: 2vw 5.6vw;
+
+
+    &__list {
+        display: none;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 24px;
+        margin-top: 44px;
+
+        &--is-active {
+            display: grid;
+        }
+
+        &-item {
+            img {
+                max-width: 100%;
+                border-radius: 4px;
+            }
+        }
+    }
+    &__tabs {
+        display: flex ;
+        justify-content: center;
+
+        &-button {
+            color: variaveis.$corTextoSecundaria;
+            font-size: 20px;
+            padding: 5px;
+            border: none;
+            border-radius: 6px; // Bordas arredondadas
+            background-color: transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 0 1vw;
+
+            &:hover {
+                background-color: transparent; // Defina uma cor de fundo para o hover
+                color: #fff; // Alterne a cor do texto, se necessário
+                box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); // Aumente a sombra ao passar o mouse
+            }
+
+            &:active {
+                transform: translateY(0); // Retorne ao estado original ao clicar
+                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); // Suavize a sombra ao clicar
+            }
+            &--is-active {
+                border-bottom: 5px solid;
+
+            }
+    }
+}
+}
